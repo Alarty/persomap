@@ -6,7 +6,7 @@
     >
       <GmapMarker
           :key="index"
-          v-for="(m, index) in markers"
+          v-for="(m, index) in places"
           :position="m.position"
           :clickable="true"
           :draggable="true"
@@ -15,13 +15,14 @@
     </GmapMap>
 
     <div id="timeline">
-      <ul>
-        <gmap-autocomplete id="autocompleteInput"
-                           @place_changed="validPlaceInput"
-                           :select-first-on-enter="true" v-model="message">
-        </gmap-autocomplete>
-        <li v-for="(place, index) in places" :key='index'>
-          {{index}}, {{place.nom}} : {{place.lat}},{{place.lng}}
+      <gmap-autocomplete id="autocompleteInput"
+                         @place_changed="validPlaceInput"
+                         :select-first-on-enter="true" v-model="message">
+      </gmap-autocomplete>
+      <ul id="placesList">
+
+        <li v-for="(place, index) in places" :key='index'  class="listedPlace" :class="{selected:index === selectedPlace}" @click="clickList(place,index)">
+          {{index}}, {{place.nom}} : {{place.position.lat}},{{place.position.lng}}
           <button v-on:click="removePlace(index)">
             <font-awesome-icon icon="times"/>
           </button>
@@ -42,65 +43,61 @@
         zoom: 4,
         center: {lat: 50.0, lng: 0.0},
         places: json.places,
+        selectedPlace: undefined,
         placeInfos: '',
         latLng: {},
-        message: '',
-        markers: [{
-          position: {
-            lat: 50.0,
-            lng: 0.0,
-          }
-        }, {
-          position: {
-            lat: 50.1,
-            lng: 0.0,
-          }
-        }]
+        message: ''
       }
     },
     methods: {
       //on post of place input autocomplete
-      validPlaceInput(place) {
-        if (place) {
-          this.addPlace(place)
+      validPlaceInput(_place) {
+        if (_place) {
+          this.addPlace(_place)
         } else {
           console.log("Error : Place not found")
         }
       },
 
       //add new place to places
-      addPlace(place) {
-        var name_select = document.getElementById('autocompleteInput').value
+      addPlace(_place) {
+        var _name_select = document.getElementById('autocompleteInput').value
+        var _LatLng = {
+          //fix the latlng precision to 4 digit after decimal
+          lat: _place.geometry.location.lat().toFixed(4),
+          lng: _place.geometry.location.lng().toFixed(4)
+        }
         this.places.push(
           {
-            nom: name_select,
-            //fix the latlng precision to 4 digit after decimal
-            lat: place.geometry.location.lat().toFixed(4),
-            lng: place.geometry.location.lng().toFixed(4),
+            nom: _name_select,
+            position: _LatLng
           }
         )
 
       },
 
-      removePlace(id) {
-        this.places.splice(id, 1)
+      removePlace(_id) {
+        this.places.splice(_id, 1)
       },
 
-      markerClick(id) {
+      markerClick(_id) {
         this.$refs.mapRef.$mapPromise.then((map) => {
-          map.panTo(this.markers[id].position)
-          this.displayInfos(id)
-          this.addDataForm = id
+          map.panTo(this.places[_id].position)
 
         })
+
       },
-      displayInfos(id) {
-        if (this.placeInfos === '') {
-          this.placeInfos = this.markers[id]
-        } else {
-          this.placeInfos = ''
-        }
+      //get the place elem and it index place in the list
+      clickList(_place,_index){
+        //Center map on place
+        this.$refs.mapRef.$mapPromise.then((map) => {
+          map.panTo(_place.position)
+        })
+        //Set the index as selected (to select on list
+        this.selectedPlace = _index
+
       }
+
     }
   }
 

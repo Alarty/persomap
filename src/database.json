@@ -2,117 +2,155 @@
   "places": [
     {
       "id": "1",
-      "lat": "41.3851",
-      "lng": "2.1734",
-      "nom": "Barcelone"
+      "nom": "Barcelone",
+      "position" : {
+        "lat": 41.3851,
+        "lng": 2.1734
+      }
     },
     {
       "id": "2",
-      "lat": "45.1162",
-      "lng": "7.74262",
-      "nom": "Turin"
+      "nom": "Turin",
+      "position" : {
+        "lat": 45.1162,
+        "lng": 7.74262
+      }
     },
     {
       "id": "3",
-      "lat": "49.1427",
-      "lng": "9.21088",
-      "nom": "Heilbronn"
+      "nom": "Heilbronn",
+      "position" : {
+        "lat": 49.1427,
+        "lng": 9.21088
+      }
     },
     {
       "id": "4",
-      "lat": "50.0647",
-      "lng": "19.945",
-      "nom": "Cracovie"
+      "nom": "Cracovie",
+      "position" : {
+        "lat": 50.0647,
+        "lng": 19.945
+      }
     },
     {
       "id": "5",
-      "lat": "53.7784",
-      "lng": "20.4801",
-      "nom": "Olsztyn"
+      "nom": "Olsztyn",
+      "position" : {
+        "lat": 53.7784,
+        "lng": 20.4801
+      }
     },
     {
       "id": "6",
-      "lat": "53.0138",
-      "lng": "18.5984",
-      "nom": "Torun"
+      "nom": "Torun",
+      "position" : {
+        "lat": 53.0138,
+        "lng": 18.5984
+      }
     },
     {
       "id": "7",
-      "lat": "52.4064",
-      "lng": "16.9252",
-      "nom": "Poznan"
+      "nom": "Poznan",
+      "position" : {
+        "lat": 52.4064,
+        "lng": 16.9252
+      }
     },
     {
       "id": "8",
-      "lat": "45.8992",
-      "lng": "6.12938",
-      "nom": "Annecy"
+      "nom": "Annecy",
+      "position" : {
+        "lat": 45.8992,
+        "lng": 6.12938
+      }
     },
     {
       "id": "9",
-      "lat": "45.6923",
-      "lng": "5.909",
-      "nom": "Aix les Bains"
+      "nom": "Aix les Bains",
+      "position" : {
+        "lat": 45.6923,
+        "lng": 5.909
+      }
     },
     {
       "id": "10",
-      "lat": "46.0604",
-      "lng": "6.58058",
-      "nom": "Cluses"
+      "nom": "Cluses",
+      "position" : {
+        "lat": 46.0604,
+        "lng": 6.58058
+      }
     },
     {
       "id": "11",
-      "lat": "37.9838",
-      "lng": "23.7275",
-      "nom": "Ath\u00e8nes"
+      "nom": "Ath\u00e8nes",
+      "position" : {
+        "lat": 37.9838,
+        "lng": 23.7275
+      }
     },
     {
       "id": "12",
-      "lat": "50.0755",
-      "lng": "14.4378",
-      "nom": "Prague"
+      "nom": "Prague",
+      "position" : {
+        "lat": 50.0755,
+        "lng": 14.4378
+      }
     },
     {
       "id": "17",
-      "lat": "7.31209",
-      "lng": "-73.8074",
-      "nom": "Cano Cristales"
+      "nom": "Cano Cristales",
+      "position" : {
+        "lat": 7.31209,
+        "lng": -73.8074
+      }
     },
     {
       "id": "18",
-      "lat": "38.7223",
-      "lng": "-9.13934",
-      "nom": "Lisbonne"
+      "nom": "Lisbonne",
+      "position" : {
+        "lat": 38.7223,
+        "lng": -9.13934
+      }
     },
     {
       "id": "19",
-      "lat": "42.6507",
-      "lng": "18.0944",
-      "nom": "Dubrovnik"
+      "nom": "Dubrovnik",
+      "position" : {
+        "lat": 42.6507,
+        "lng": 18.0944
+      }
     },
     {
       "id": "20",
-      "lat": "39.0968",
-      "lng": "-120.032",
-      "nom": "Lake Tahoe"
+      "nom": "Lake Tahoe",
+      "position" : {
+        "lat": 39.0968,
+        "lng": -120.032
+      }
     },
     {
       "id": "21",
-      "lat": "36.0544",
-      "lng": "-112.14",
-      "nom": "Grand Canyon"
+      "nom": "Grand Canyon",
+      "position" : {
+        "lat": 36.0544,
+        "lng": -112.14
+      }
     },
     {
       "id": "22",
-      "lat": "43.0962",
-      "lng": "-79.0377",
-      "nom": "Niagara Falls"
+      "nom": "Niagara Falls",
+      "position" : {
+        "lat": 43.0962,
+        "lng": -79.0377
+      }
     },
     {
       "id": "25",
-      "lat": "12.8797",
-      "lng": "121.774",
-      "nom": "Philippines"
+      "nom": "Philippines",
+      "position" : {
+        "lat": 12.8797,
+        "lng": 121.774
+      }
     }
   ]
 }

@@ -5,12 +5,16 @@ ul {
     list-style-type: none;
 }
 
-ul li {
-    padding: 20px;
+.listedPlace{
+    padding: 10%;
     background-color: #E0EDF4;
-    border-left: 5px solid #3EB3F6;
-    margin-bottom: 2px;
+    border-left: 5px solid #c1ddf4;
+    margin-bottom: 4px;
     color: #3E5252;
+}
+
+.listedPlace.selected {
+    background-color: #c1ddf4;
 }
 
 p {

@@ -40,7 +40,6 @@
     /*disable scroll for this*/
     overflow: hidden;
     padding: 20px 20px 20px 0;
-    height: 20%;
   }
 
   nav a {
