@@ -1,23 +1,18 @@
 <template>
-    <div>
+  <div>
 
-    </div>
+  </div>
 </template>
 
 <script>
 
-    export default {
-        name: 'Stats',
-        data () {
-            return {
-
-
-            }
-        },
-        methods:{
-
-        }
-    }
+  export default {
+    name: 'Stats',
+    data() {
+      return {}
+    },
+    methods: {}
+  }
 
 
 </script>

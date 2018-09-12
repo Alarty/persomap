@@ -1,23 +1,18 @@
 <template>
-    <div>
+  <div>
 
-    </div>
+  </div>
 </template>
 
 <script>
 
-    export default {
-        name: 'Profile',
-        data () {
-            return {
-
-
-            }
-        },
-        methods:{
-
-        }
-    }
+  export default {
+    name: 'Profile',
+    data() {
+      return {}
+    },
+    methods: {}
+  }
 
 
 </script>

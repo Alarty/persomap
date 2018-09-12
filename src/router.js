@@ -10,8 +10,8 @@ import Profile from './components/Profile.vue'
 Vue.use(Router)
 
 export default new Router({
-    mode: 'history',
-    routes: [
+  mode: 'history',
+  routes: [
     {
       path: '/Example/',
       name: 'Example',
@@ -30,21 +30,21 @@ export default new Router({
     },
 
     {
-        path: '/stats',
-        name: 'Stats',
-        component: Stats
+      path: '/stats',
+      name: 'Stats',
+      component: Stats
     },
 
     {
-        path: '/sign',
-        name: 'Sign',
-        component: Sign
+      path: '/sign',
+      name: 'Sign',
+      component: Sign
     },
 
     {
-        path: '/profile',
-        name: 'Profile',
-        component: Profile
+      path: '/profile',
+      name: 'Profile',
+      component: Profile
     }
   ]
 })
