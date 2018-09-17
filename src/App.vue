@@ -3,7 +3,7 @@
     <nav>
       <router-link :to="{ name: 'Home'}">MapSelector</router-link>
       <router-link :to="{ name: 'Stats'}">Stats</router-link>
-      <router-link :to="{ name: 'Sign'}">Sign in/up - Profile</router-link>
+      <router-link :to="{ name: 'Login'}">Login - Profile</router-link>
       <!--
           <router-link :to="{ name: 'Example2', params: { username: 123 }}">Example2</router-link>
       -->
@@ -14,12 +14,25 @@
 </template>
 
 <script>
+
+  import { mapActions } from 'vuex';
+
   import Home from './components/Home.vue'
 
   export default {
     name: 'app',
     components: {
       Home
+    },
+    methods: {
+      //to map the vuex actions for fetching the token
+      ...mapActions([
+        'fetchAccessToken'
+      ]),
+    },
+    //run code just after created instance
+    created() {
+      this.fetchAccessToken();
     }
   }
 </script>

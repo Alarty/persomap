@@ -4,7 +4,7 @@ import Example from './components/Example/Example.vue'
 import Example2 from './components/Example/Example2.vue'
 import Home from './components/Home.vue'
 import Stats from './components/Stats.vue'
-import Sign from './components/Sign.vue'
+import Login from './components/Login.vue'
 import Profile from './components/Profile.vue'
 
 Vue.use(Router)
@@ -36,9 +36,9 @@ export default new Router({
     },
 
     {
-      path: '/sign',
-      name: 'Sign',
-      component: Sign
+      path: '/login',
+      name: 'Login',
+      component: Login
     },
 
     {
