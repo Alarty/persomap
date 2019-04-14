@@ -5,7 +5,7 @@ import Example2 from './components/Example/Example2.vue'
 import Home from './components/Home.vue'
 import Stats from './components/Stats.vue'
 import Login from './components/Login.vue'
-import Profile from './components/Profile.vue'
+import Profil from './components/Profil.vue'
 
 Vue.use(Router)
 
@@ -42,9 +42,9 @@ export default new Router({
     },
 
     {
-      path: '/profile',
-      name: 'Profile',
-      component: Profile
+      path: '/profil',
+      name: 'Profil',
+      component: Profil
     }
   ]
 })

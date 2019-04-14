@@ -7,7 +7,7 @@
 <script>
 
   export default {
-    name: 'Profile',
+    name: 'Profil',
     data() {
       return {}
     },
@@ -18,6 +18,6 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style src="./style/Profile.css" scoped>
+<style src="./style/Profil.css" scoped>
 
 </style>

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+import router from './router.js' //or whatever your router.js path is
 
 Vue.use(Vuex)
 
@@ -39,6 +40,8 @@ export default new Vuex.Store({
           //finish commiting mutations
           commit('loginStop', null)
           commit('updateAccessToken', response.data.token)
+          //redirect to main page
+          router.push({ name: 'Home' })
         })
         .catch(error => {
           commit('loginStop', error.response.data.error)

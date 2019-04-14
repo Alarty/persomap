@@ -3,7 +3,7 @@
     <nav>
       <router-link :to="{ name: 'Home'}">MapSelector</router-link>
       <router-link :to="{ name: 'Stats'}">Stats</router-link>
-      <router-link :to="{ name: 'Login'}">Login - Profile</router-link>
+      <router-link :to="{ name: 'Profil'}">Profil</router-link>
       <!--
           <router-link :to="{ name: 'Example2', params: { username: 123 }}">Example2</router-link>
       -->
